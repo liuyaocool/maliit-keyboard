@@ -356,8 +356,7 @@ endif()
 
 # Installation
 
-install(FILES COPYING COPYING.BSD README.md
-        DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/maliit-keyboard)
+install(FILES DESTINATION ${CMAKE_INSTALL_DATADIR}/doc/maliit-keyboard)
 
 install(TARGETS maliit-keyboard-plugin maliit-keyboard
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}/maliit/plugins
@@ -373,10 +372,8 @@ install(DIRECTORY data/devices
 install(FILES data/schemas/org.maliit.keyboard.maliit.gschema.xml
         DESTINATION share/glib-2.0/schemas/)
 
-install(FILES com.github.maliit.keyboard.desktop
-        DESTINATION share/applications)
-install(FILES com.github.maliit.keyboard.metainfo.xml
-        DESTINATION share/metainfo)
+install(FILES DESTINATION share/applications)
+install(FILES DESTINATION share/metainfo)
 
 # Translations
 add_subdirectory(po)
