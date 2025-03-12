@@ -642,6 +642,7 @@ void AbstractTextEditor::onKeyReleased(const Key &key)
         event_key = Qt::Key_End;
         break;
 
+    case Key::ActionDelete:     event_key = Qt::Key_Delete; break;
     case Key::ActionEscape:     event_key = Qt::Key_Escape; break;
     case Key::ActionPageUp:     event_key = Qt::Key_PageUp; break;
     case Key::ActionPageDown:   event_key = Qt::Key_PageDown; break;

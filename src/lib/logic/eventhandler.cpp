@@ -115,6 +115,8 @@ void EventHandler::onKeyReleased(QString label, QString action)
         key.setAction(Key::ActionAlt);
     else if (action == QLatin1String("meta"))
         key.setAction(Key::ActionMeta);
+    else if (action == QLatin1String("delete"))
+        key.setAction(Key::ActionDelete);
     else if (action == "keysequence") {
         key.setCommandSequence(label);
         key.setAction(Key::ActionKeySequence);

@@ -78,6 +78,7 @@ public:
         ActionControl, //!< Key sends Control
         ActionAlt, //!< Key sends Alt
         ActionMeta, //!< Key sends Meta
+        ActionDelete, //!< Key sends Delete
         NumActions
     };
 
