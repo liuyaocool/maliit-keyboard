@@ -116,8 +116,9 @@ KeyPad {
 
             ActionKey { id: ctrl; label: "Ctrl"; action: "ctrl"; anchors.left: parent.left; }
             ActionKey { id: alt;  label: "Alt";  action: "alt";  anchors.left: ctrl.right;  }
-            LanguageKey    { id: language; anchors.left: alt.right; }
-            SpaceKey  { id: space; noMagnifier: true; anchors.left: language.right; anchors.right: left.left; height: parent.height; }
+            LanguageKey { id: language; anchors.left: alt.right; }
+            // SpaceKey 必须加id:spaceKey 
+            SpaceKey  { id: spaceKey; anchors.left: language.right; anchors.right: left.left; noMagnifier: true; height: parent.height; }
             ActionKey { id: left;  label: "←"; action: "left";  anchors.right: down.left;   }
             ActionKey { id: down;  label: "↓"; action: "down";  anchors.right: right.left;  }
             ActionKey { id: right; label: "→"; action: "right"; anchors.right: parent.right;}
