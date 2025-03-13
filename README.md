@@ -14,7 +14,8 @@ make
 sudo make install
 
 # replace
-sudo cp /usr/local/bin/maliit-keyboard /usr/xxx/maliit-keyboard
+sudo mv /usr/bin/maliit-keyboard /usr/bin/maliit-keyboard.bak
+sudo ln -s /usr/local/bin/maliit-keyboard /usr/bin/maliit-keyboard
 ```
 
 # Keyboard Demo

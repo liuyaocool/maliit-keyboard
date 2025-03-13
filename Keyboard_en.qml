@@ -35,6 +35,27 @@ KeyPad {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
+            ActionKey { label: "Esc"; action: "esc"; shifted: label; }
+            
+            CharKey { label: "-"; shifted: "_"; extended: ["_"]; extendedShifted: ["-"]; }
+            CharKey { label: "="; shifted: "+"; extended: ["+"]; extendedShifted: ["="]; }
+
+            CharKey { label: "["; shifted: "{"; extended: ["{"]; extendedShifted: ["["]; }
+            CharKey { label: "]"; shifted: "}"; extended: ["}"]; extendedShifted: ["]"]; }
+
+            CharKey { label: ";"; shifted: ":"; extended: [":"]; extendedShifted: [";"]; }
+            CharKey { label: "'"; shifted: "\""; extended: ["\""]; extendedShifted: ["'"]; }
+        
+            CharKey { label: ","; shifted: "<"; extended: ["<"]; extendedShifted: [","]; }
+            CharKey { label: "|"; shifted: "\\"; extended: ["\\"]; extendedShifted: ["|"]; }
+
+            BackspaceKey {}
+        }
+
+        Row {
+            anchors.horizontalCenter: parent.horizontalCenter;
+            spacing: 0
+
             CharKey { label: "`"; shifted: "~"; extended: ["~"]; extendedShifted: ["`"]; }
             CharKey { label: "1"; shifted: "!"; extended: ["!"]; extendedShifted: ["1"]; }
             CharKey { label: "2"; shifted: "@"; extended: ["@"]; extendedShifted: ["2"]; }
@@ -46,16 +67,12 @@ KeyPad {
             CharKey { label: "8"; shifted: "*"; extended: ["*"]; extendedShifted: ["8"]; }
             CharKey { label: "9"; shifted: "("; extended: ["("]; extendedShifted: ["9"]; }
             CharKey { label: "0"; shifted: ")"; extended: [")"]; extendedShifted: ["0"]; }
-            CharKey { label: "-"; shifted: "_"; extended: ["_"]; extendedShifted: ["-"]; }
-            CharKey { label: "="; shifted: "+"; extended: ["+"]; extendedShifted: ["="]; }
-            BackspaceKey {}
         }
 
         Row {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
-            ActionKey { label: "↹"; action: "tab"; }
             CharKey { label: "q"; shifted: "Q"; }
             CharKey { label: "w"; shifted: "W"; }
             CharKey { label: "e"; shifted: "E"; }
@@ -66,16 +83,13 @@ KeyPad {
             CharKey { label: "i"; shifted: "I"; }
             CharKey { label: "o"; shifted: "O"; }
             CharKey { label: "p"; shifted: "P"; }
-            CharKey { label: "["; shifted: "{"; extended: ["{"]; extendedShifted: ["["]; }
-            CharKey { label: "]"; shifted: "}"; extended: ["}"]; extendedShifted: ["]"]; }
-            CharKey { label: "\\"; shifted: "|"; extended: ["|"]; extendedShifted: ["\\"]; }
         }
 
         Row {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
-            ActionKey { label: "Esc"; action: "esc"; }
+            ActionKey { label: "↹"; action: "tab"; shifted: label; }
             CharKey { label: "a"; shifted: "A"; }
             CharKey { label: "s"; shifted: "S"; }
             CharKey { label: "d"; shifted: "D"; }
@@ -85,9 +99,7 @@ KeyPad {
             CharKey { label: "j"; shifted: "J"; }
             CharKey { label: "k"; shifted: "K"; }
             CharKey { label: "l"; shifted: "L"; }
-            CharKey { label: ";"; shifted: ":"; extended: [":"]; extendedShifted: [";"]; }
-            CharKey { label: "'"; shifted: "\""; extended: ["\""]; extendedShifted: ["'"]; }
-            ReturnKey { rightSide: true; }
+            ReturnKey {}
         }
 
         Row {
@@ -102,10 +114,8 @@ KeyPad {
             CharKey { label: "b"; shifted: "B"; }
             CharKey { label: "n"; shifted: "N"; }
             CharKey { label: "m"; shifted: "M"; }
-            CharKey { label: ","; shifted: "<"; extended: ["<"]; extendedShifted: [","]; }
-            CharKey { label: "."; shifted: ">"; extended: [">"]; extendedShifted: ["."]; }
-            CharKey { label: "/"; shifted: "?"; extended: ["?"]; extendedShifted: ["/"]; }
-            ActionKey { label: "↑"; action: "up"; }
+            ActionKey { label: "↑"; action: "up"; shifted: label; }
+            ReturnKey {}
         }
 
         Item {
@@ -114,14 +124,16 @@ KeyPad {
 
             height: panel.keyHeight + Device.row_margin;
 
-            ActionKey { id: ctrl; label: "Ctrl"; action: "ctrl"; anchors.left: parent.left; }
-            ActionKey { id: alt;  label: "Alt";  action: "alt";  anchors.left: ctrl.right;  }
+            ActionKey { id: ctrl; label: "Ctrl"; action: "ctrl"; shifted: label; anchors.left: parent.left; }
+            ActionKey { id: alt;  label: "Alt";  action: "alt";  shifted: label; anchors.left: ctrl.right;  }
             LanguageKey { id: language; anchors.left: alt.right; }
             // SpaceKey 必须加id:spaceKey 
-            SpaceKey  { id: spaceKey; anchors.left: language.right; anchors.right: left.left; noMagnifier: true; height: parent.height; }
-            ActionKey { id: left;  label: "←"; action: "left";  anchors.right: down.left;   }
-            ActionKey { id: down;  label: "↓"; action: "down";  anchors.right: right.left;  }
-            ActionKey { id: right; label: "→"; action: "right"; anchors.right: parent.right;}
+            SpaceKey  { id: spaceKey; anchors.left: language.right; anchors.right: dot.left; noMagnifier: true; height: parent.height; }
+            CharKey   { id: dot;   label: "."; anchors.right: sla.left;  shifted: ">"; extended: [">"]; extendedShifted: ["."]; }
+            CharKey   { id: sla;   label: "/"; anchors.right: left.left; shifted: "?"; extended: ["?"]; extendedShifted: ["/"]; }
+            ActionKey { id: left;  label: "←"; action: "left";   shifted: label; anchors.right: down.left;   }
+            ActionKey { id: down;  label: "↓"; action: "down";   shifted: label; anchors.right: right.left;  }
+            ActionKey { id: right; label: "→"; action: "right";  shifted: label; anchors.right: parent.right;}
 
         }
     } // column
