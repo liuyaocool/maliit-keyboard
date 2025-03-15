@@ -54,7 +54,7 @@ QString ChineseLanguageFeatures::appendixForReplacedPreedit(const QString &preed
 
 bool ChineseLanguageFeatures::isSeparator(const QString &text) const
 {
-    static const QString separators = QStringLiteral("。、，！？：；.,!?:;…\r\n");
+    static const QString separators = QStringLiteral("！…；：，。、？\r\n");
 
     if (text.isEmpty()) {
         return false;
@@ -69,7 +69,7 @@ bool ChineseLanguageFeatures::isSeparator(const QString &text) const
 
 bool ChineseLanguageFeatures::isSymbol(const QString &text) const
 {
-    static const QString symbols = QStringLiteral(R"(*#+=()@~/\€£$¥₹%<>[]`^|_—–•§{}¡¿«»"“”„&0123456789)");
+    static const QString symbols = QStringLiteral(R"(·~@#￥%&*（）—+-=【】「」‘’“”《》|€£$¥₹〔［〚‘’/\<>[]`^_–•§¡¿«»"„)");
 
     if (text.isEmpty()) {
         return false;
