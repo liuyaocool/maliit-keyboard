@@ -8,6 +8,7 @@ Spacer 1.0 Spacer.qml
 BackspaceKey 1.0 BackspaceKey.qml
 ExtendedKeysSelector 1.0 ExtendedKeysSelector.qml
 LanguageKey 1.0 LanguageKey.qml
+LanguageSwitch 1.0 LanguageSwitch.qml
 OneTwoKey 1.0 OneTwoKey.qml
 ShiftKey 1.0 ShiftKey.qml
 SymbolShiftKey 1.0 SymbolShiftKey.qml

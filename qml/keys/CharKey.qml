@@ -32,7 +32,7 @@ Item {
     property string iconShifted: ""
     property string iconCapsLock: ""
     property string label: ""
-    property string shifted: ""
+    property string shifted: label
     property var extended; // list of extended keys
     property var extendedShifted; // list of extended keys in shifted state
     property var currentExtendedKey; // The currently highlighted extended key
