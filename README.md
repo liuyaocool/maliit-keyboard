@@ -18,6 +18,11 @@ sudo mv /usr/bin/maliit-keyboard /usr/bin/maliit-keyboard.bak
 sudo ln -s /usr/local/bin/maliit-keyboard /usr/bin/maliit-keyboard
 ```
 
-# Keyboard Demo
+# 支持拼音
 
-[Keyboard_en.qml](Keyboard_en.qml)
+**Arch Linux**
+
+```bash
+sudo pacman -S libpinyin
+# 执行 Install
+```
