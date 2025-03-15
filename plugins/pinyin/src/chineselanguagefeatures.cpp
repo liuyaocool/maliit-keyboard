@@ -69,7 +69,7 @@ bool ChineseLanguageFeatures::isSeparator(const QString &text) const
 
 bool ChineseLanguageFeatures::isSymbol(const QString &text) const
 {
-    static const QString symbols = QStringLiteral(R"(·~@#￥%&*（）—+-=【】「」‘’“”《》|{}()!?';:,.1234567890€£$¥₹‘’/\<>[]`^_–•§¡¿«»"„)");
+    static const QString symbols = QStringLiteral(R"(·~@#￥%&*（）—+-=【】「」‘’“”《》|1234567890€£$¥/\<>[]{}`^_–•§¡¿«»„)");
 
     if (text.isEmpty()) {
         return false;

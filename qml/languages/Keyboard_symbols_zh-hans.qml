@@ -37,16 +37,17 @@ KeyPad {
             anchors.margins: 50;
             spacing: 0
 
-            CharKey { label: "1"; shifted: "€"; leftSide: true; }
-            CharKey { label: "2"; shifted: "£"; }
-            CharKey { label: "3"; shifted: "$"; }
-            CharKey { label: "4"; shifted: "¥"; }
-            CharKey { label: "5"; shifted: "…"; }
-            CharKey { label: "6"; shifted: "%"; }
-            CharKey { label: "7"; shifted: "<"; }
-            CharKey { label: "8"; shifted: ">"; }
-            CharKey { label: "9"; shifted: "["; extendedShifted: ["【", "〔", "［"] }
-            CharKey { label: "0"; shifted: "]"; extendedShifted: ["】", "〕", "］"]; rightSide: true; }
+            CharKey { label: "`"; }
+            CharKey { label: "1"; }
+            CharKey { label: "2"; }
+            CharKey { label: "3"; }
+            CharKey { label: "4"; }
+            CharKey { label: "5"; }
+            CharKey { label: "6"; }
+            CharKey { label: "7"; }
+            CharKey { label: "8"; }
+            CharKey { label: "9"; }
+            CharKey { label: "0"; }
         }
 
         Row {
@@ -54,15 +55,17 @@ KeyPad {
             anchors.margins: 50;
             spacing: 0
 
-            CharKey { label: "*"; shifted: "`"; leftSide: true; }
-            CharKey { label: "#"; shifted: "^"; }
-            CharKey { label: "+"; shifted: "|"; }
-            CharKey { label: "-"; shifted: "_"; extended: ["—", "–", "•"]; }
-            CharKey { label: "="; shifted: "§"; }
-            CharKey { label: "（"; shifted: "{"; extended: ["("] }
-            CharKey { label: "）"; shifted: "}"; extended: [")"]}
-            CharKey { label: "！"; shifted: "¡"; extended: ["!"] }
-            CharKey { label: "？"; shifted: "¿"; extended: ["?"]; rightSide: true; }
+            CharKey { label: "~"; }
+            CharKey { label: "！"; }
+            CharKey { label: "@"; }
+            CharKey { label: "#"; }
+            CharKey { label: "￥"; }
+            CharKey { label: "%"; }
+            CharKey { label: "…"; }
+            CharKey { label: "&"; }
+            CharKey { label: "*"; }
+            CharKey { label: "（"; }
+            CharKey { label: "）"; }
         }
 
         Row {
@@ -70,28 +73,71 @@ KeyPad {
             anchors.margins: 50;
             spacing: 0
 
-            OneTwoKey { label: "1/2"; shifted: "2/2"; fontSize: Device.fontSize; }
-            CharKey { label: "@"; shifted: "《"; extendedShifted: ["〈", "«", "‹"]; }
-            CharKey { label: "~"; shifted: "》"; extendedShifted: ["〉", "»", "›"]; }
-            CharKey { label: "/"; shifted: "“"; extendedShifted: ["\"", "‘"]; }
-            CharKey { label: "\\"; shifted: "”"; extendedShifted: ["\"", "’"]; }
-            CharKey { label: "'"; shifted: "「"; extendedShifted: ["『"]; }
-            CharKey { label: "；"; shifted: "」"; extended: [";"]; extendedShifted: ["』"]; }
-            CharKey { label: "："; shifted: "&"; extended: [":"]; }
-            BackspaceKey {}
+            CharKey { label: "•"; }
+            CharKey { label: "["; }
+            CharKey { label: "]"; }
+            CharKey { label: "{"; }
+            CharKey { label: "}"; }
+            CharKey { label: "【"; }
+            CharKey { label: "】"; }
+            CharKey { label: "「"; }
+            CharKey { label: "」"; }
+            CharKey { label: "|"; }
+            CharKey { label: "、"; }
         }
 
-        Item {
-            anchors.left: parent.left
-            anchors.right: parent.right
+        Row {
+            anchors.horizontalCenter: parent.horizontalCenter;
+            anchors.margins: 50;
+            spacing: 0
+            
+            CharKey { label: "€"; }
+            CharKey { label: "£"; }
+            CharKey { label: "$"; }
+            CharKey { label: "¥"; }
+            CharKey { label: "；"; }
+            CharKey { label: "："; }
+            CharKey { label: "‘"; }
+            CharKey { label: "’"; }
+            CharKey { label: "“"; }
+            CharKey { label: "”"; }
+            CharKey { label: "„"; }
+        }
 
-            height: panel.keyHeight + Device.bottom_margin*2;
+        Row {
+            anchors.horizontalCenter: parent.horizontalCenter;
+            anchors.margins: 50;
+            spacing: 0
 
-            SymbolShiftKey { id: symShiftKey; label: "ABC"; shifted: "ABC"; anchors.left: parent.left; height: parent.height; }
-            CharKey        { id: commaKey;    label: "，"; shifted: "/"; extended: [","];    anchors.left: symShiftKey.right; height: parent.height; }
-            SpaceKey       { id: spaceKey;                                  anchors.left: commaKey.right; anchors.right: dotKey.left; noMagnifier: true; height: parent.height }
-            CharKey        { id: dotKey;      label: "。"; shifted: "."; extended: ["."];    anchors.right: enterKey.left; height: parent.height; }
-            ReturnKey      { id: enterKey;                                  anchors.right: parent.right; height: parent.height; }
+            CharKey { label: "·"; }
+            CharKey { label: "«"; }
+            CharKey { label: "»"; }
+            CharKey { label: "<"; }
+            CharKey { label: ">"; }
+            CharKey { label: "《"; }
+            CharKey { label: "》"; }
+            CharKey { label: "，"; }
+            CharKey { label: "。"; }
+            CharKey { label: "/"; }
+            CharKey { label: "？"; }
+        }
+
+        Row {
+            anchors.horizontalCenter: parent.horizontalCenter;
+            anchors.margins: 50;
+            spacing: 0
+            
+            SymbolShiftKey { label: "ABC"; shifted: label; }
+            CharKey { label: "_"; }
+            CharKey { label: "–"; }
+            CharKey { label: "—"; }
+            CharKey { label: "-"; }
+            CharKey { label: "+"; }
+            CharKey { label: "="; }
+            CharKey { label: "^"; }
+            CharKey { label: "§"; }
+            CharKey { label: "¡"; }
+            CharKey { label: "¿"; }  
         }
     } // column
 }

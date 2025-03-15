@@ -88,13 +88,10 @@ KeyPad {
             SymbolShiftKey { id: symShiftKey; label: "符号"; anchors.left: parent.left; }
             LanguageSwitch { id: language;    next: "en"; anchors.left: symShiftKey.right; }
             // SpaceKey 必须加id:spaceKey
-            SpaceKey  { id: spaceKey; anchors.left: language.right; anchors.right: dotKey.left; noMagnifier: true; }
-            CharKey   { id: dotKey; label: "，"; anchors.right: left.left; }
+            SpaceKey  { id: spaceKey; anchors.left: language.right; anchors.right: left.left; noMagnifier: true; }
             ActionKey { id: left;  label: "←"; action: "left";   anchors.right: down.left;   }
             ActionKey { id: down;  label: "↓"; action: "down";   anchors.right: right.left;  }
             ActionKey { id: right; label: "→"; action: "right";  anchors.right: parent.right;}
-
-            // CharKey        { id: commaKey;    label: "，"; shifted: ",";  anchors.left: languageMenuButton.right; height: parent.height; }
         }
     } // column
 }
