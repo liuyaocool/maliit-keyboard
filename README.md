@@ -1,6 +1,18 @@
 # Introduce
 
-modify support Tab Ctrl Meta Alt
+modify support Tab Ctrl Meta Alt Chinese
+
+**英文键盘**
+
+![](doc/en.png)
+
+**中文键盘**
+
+![](doc/zh-hans.png)
+
+**中文符号键盘**
+
+![](doc/zh-hans-symbol.png)
 
 # Install
 
