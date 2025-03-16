@@ -19,6 +19,8 @@ import QtQuick.Controls 2.12
 
 import MaliitKeyboard 2.0
 
+import "config.js" as Config
+
 Item {
     id: key
 
@@ -107,8 +109,6 @@ Item {
     signal doubleClicked()
     signal keySent(string key)
 
-    BackgroundKey{ }
-
     Component.onCompleted: {
         if (annotation) {
             __annotationLabelNormal = annotation
@@ -131,6 +131,10 @@ Item {
         width: parent.width
 
         ToolButton {
+            Rectangle {
+                anchors.fill: parent
+                color: Config.get("Button", "background.color", "#323234")
+            }
             id: keyButton
             anchors.fill: parent
             anchors.leftMargin: key.leftSide ? (parent.width - panel.keyWidth) + key.keyMargin : key.keyMargin
@@ -158,6 +162,8 @@ Item {
                 text: label
                 font.pixelSize: key.fontSize
                 font.weight: Font.Light
+                // 按键颜色
+                color: Config.get("Button", "font.color", "white")
                 anchors.right: parent.right
                 anchors.left: parent.left
                 anchors.leftMargin: Device.gu(0.2)
@@ -175,7 +181,8 @@ Item {
             Label {
                 id: annotationLabel
                 text: __annotationLabelNormal
-
+                // 按键右上角颜色
+                color: Config.get("Button", "font.color", "white")
                 anchors.right: parent.right
                 anchors.top: parent.top
                 anchors.topMargin: Device.annotationTopMargin

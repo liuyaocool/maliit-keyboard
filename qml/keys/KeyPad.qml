@@ -16,6 +16,8 @@
 
 import QtQuick 2.4
 
+import "config.js" as Config
+
 Item {
     id: keyPadRoot
 
@@ -25,7 +27,14 @@ Item {
     property string symbols: "languages/Keyboard_symbols.qml"
     property bool capsLock: false
 
-    BackgroundKeyPad { }
+    Rectangle {
+        anchors.fill: parent
+        color: Config.get("KeyPad", "background.color", "#202022")
+    //    border {
+    //        width: 2
+    //        color: "white"
+    //    }
+    }
 
     Column {
         id: c1
@@ -35,6 +44,9 @@ Item {
     {
         calculateKeyWidth();
         calculateKeyHeight();
+        var homeDir;
+        // homeDir = Qt.application.getenv("HOME");
+        homeDir = "/home/liuyao";
     }
 
     onWidthChanged: calculateKeyWidth()
