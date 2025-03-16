@@ -1,7 +1,7 @@
 build/
 .vscode/
 -/cmake-build-debug/
--/.idea/
+.idea/
 Makefile
 moc_*
 *.moc
