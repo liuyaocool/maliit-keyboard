@@ -30,6 +30,19 @@ sudo mv /usr/bin/maliit-keyboard /usr/bin/maliit-keyboard.bak
 sudo ln -s /usr/local/bin/maliit-keyboard /usr/bin/maliit-keyboard
 ```
 
+# 样式
+
+```vim /etc/maliit/keyboard```
+
+```
+[KeyPad]
+background.color=#202022
+
+[Button]
+font.color=gray
+background.color=#323234
+```
+
 # 支持拼音
 
 **Arch Linux**
