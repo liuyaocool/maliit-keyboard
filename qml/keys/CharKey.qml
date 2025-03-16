@@ -107,6 +107,8 @@ Item {
     signal doubleClicked()
     signal keySent(string key)
 
+    BackgroundKey{ }
+
     Component.onCompleted: {
         if (annotation) {
             __annotationLabelNormal = annotation

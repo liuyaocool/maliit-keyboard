@@ -19,3 +19,5 @@ PressArea 1.0 PressArea.qml
 SpaceKey 1.0 SpaceKey.qml
 UrlKey 1.0 UrlKey.qml
 CategoryKey 1.0 CategoryKey.qml
+BackgroundKeyPad 1.0 BackgroundKeyPad.qml
+BackgroundKey 1.0 BackgroundKey.qml

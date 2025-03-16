@@ -25,6 +25,8 @@ Item {
     property string symbols: "languages/Keyboard_symbols.qml"
     property bool capsLock: false
 
+    BackgroundKeyPad { }
+
     Column {
         id: c1
     }

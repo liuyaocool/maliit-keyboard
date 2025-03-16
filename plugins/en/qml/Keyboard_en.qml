@@ -26,6 +26,16 @@ KeyPad {
     content: c1
     symbols: "languages/Keyboard_symbols.qml"
 
+    Rectangle {
+        anchors.fill: parent
+        // color: "#202022" // 背景颜色
+        color: "#323234" // 背景颜色
+        border {
+            width: 2
+            color: "white"
+        }
+    }
+
     Column {
         id: c1
         anchors.fill: parent
