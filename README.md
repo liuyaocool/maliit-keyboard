@@ -2,7 +2,7 @@
 
 modify support Tab Ctrl Meta Alt Chinese
 
-**英文键盘**
+**英文键盘: 上滑输出右上角字符**
 
 ![](doc/en.png)
 
