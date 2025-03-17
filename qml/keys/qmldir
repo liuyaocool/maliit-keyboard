@@ -4,6 +4,7 @@ DropShadow 1.0 DropShadow.qml
 KeyPopover 1.0 KeyPopover.qml
 Magnifier 1.0 Magnifier.qml
 ReturnKey 1.0 ReturnKey.qml
+ReturnKey2 1.0 ReturnKey2.qml
 Spacer 1.0 Spacer.qml
 BackspaceKey 1.0 BackspaceKey.qml
 ExtendedKeysSelector 1.0 ExtendedKeysSelector.qml
@@ -13,6 +14,7 @@ OneTwoKey 1.0 OneTwoKey.qml
 ShiftKey 1.0 ShiftKey.qml
 SymbolShiftKey 1.0 SymbolShiftKey.qml
 CharKey 1.0 CharKey.qml
+CharKeyUp 1.0 CharKeyUp.qml
 KeyPad 1.0 KeyPad.qml
 LanguageMenu 1.0 LanguageMenu.qml
 PressArea 1.0 PressArea.qml
