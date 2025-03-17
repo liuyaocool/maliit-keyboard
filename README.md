@@ -41,6 +41,7 @@ background.color=#202022
 [Button]
 font.color=gray
 background.color=#323234
+background.color.click=green
 ```
 
 # 支持拼音
